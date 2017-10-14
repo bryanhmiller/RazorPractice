@@ -2,6 +2,42 @@
     ViewBag.Title = "Home Page";
 }
 
+@{ 
+    var animals = new List<string> { "cat", "dog", "bird" };
+}
+
+<ul>
+    @foreach (var animal in animals)
+    {
+        <li>@animal</li>
+    }
+</ul>
+
+@{ 
+    var usernames = new List<string> {"Bob","Mort","Elle","Shemp" };
+    var greetings = new List<string> { "Hello, ", "Greetings, ", "Hi, ", "Hey, " };
+}
+ 
+<ul>
+    <li>
+    @foreach (var greeting in greetings)
+    {
+        <p>@greeting</p>
+    }
+    @foreach (var username in usernames)
+    {
+        <p>@username</p>
+    }   
+    </li>
+</ul>
+
+@if(System.DateTime.Now.DayOfWeek.ToString() == "Friday")
+{
+    <h1>TGIF!</h1>
+}
+
+
+
 <div class="jumbotron">
     <h1>ASP.NET</h1>
     <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
