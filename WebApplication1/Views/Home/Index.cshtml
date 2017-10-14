@@ -23,24 +23,6 @@
     {
         <li>@greetings[i] @usernames[i]</li>
     }
-
-    @*<li>
-    @foreach (var greeting in greetings)
-    {
-        <p>@greeting</p>
-    }
-    @foreach (var username in usernames)
-    {
-        <p>@username</p>
-    }   
-    </li>
-    @foreach (var greeting in greetings)
-    {
-        foreach (var username in usernames)
-        {
-            <li>@greeting @username</li>
-        }
-    }*@
 </ul>
 
 @if(System.DateTime.Now.DayOfWeek.ToString() == "Friday")
